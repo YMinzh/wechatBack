@@ -9,16 +9,16 @@ import org.springframework.stereotype.Repository;
 @Mapper
 public interface TokenMapper {
 
-    @Insert("INSERT INTO chat_token (token, user_id) VALUES (#{token}, #{user_id})")
+    @Insert("INSERT INTO chat_token (token, user_id) VALUES (#{token}, #{userId})")
     @Options(useGeneratedKeys = true, keyProperty = "id")
     void insert(Token token);
 
-    @Select("SELECT * FROM chat_token where user_id = #{user_id}")
-    Token select(long user_id);
+    @Select("SELECT * FROM chat_token where user_id = #{userId}")
+    Token select(long userId);
 
     @Select("SELECT * FROM chat_token where token = #{token}")
     Token selectUserToken(String token);
 
-    @Update("UPDATE chat_token SET token = #{token} WHERE user_id = #{user_id}")
+    @Update("UPDATE chat_token SET token = #{token} WHERE user_id = #{userId}")
     void update(Token token);
 }

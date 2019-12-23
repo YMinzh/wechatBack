@@ -7,18 +7,10 @@ public class User {
     private String username;
     private String nickname;
     private String avatar;
-    private String password_hash;
+    private String passwordHash;
     private int status;
-    private Date created_at;
-    private Date updated_at;
-
-    public String getAvatar() {
-        return avatar;
-    }
-
-    public void setAvatar(String avatar) {
-        this.avatar = avatar;
-    }
+    private Date createdAt;
+    private Date updatedAt;
 
     public long getId() {
         return id;
@@ -44,12 +36,20 @@ public class User {
         this.nickname = nickname;
     }
 
-    public String getPassword_hash() {
-        return password_hash;
+    public String getAvatar() {
+        return avatar;
     }
 
-    public void setPassword_hash(String password_hash) {
-        this.password_hash = password_hash;
+    public void setAvatar(String avatar) {
+        this.avatar = avatar;
+    }
+
+    public String getPasswordHash() {
+        return passwordHash;
+    }
+
+    public void setPasswordHash(String passwordHash) {
+        this.passwordHash = passwordHash;
     }
 
     public int getStatus() {
@@ -60,19 +60,19 @@ public class User {
         this.status = status;
     }
 
-    public Date getCreated_at() {
-        return created_at;
+    public Date getCreatedAt() {
+        return createdAt;
     }
 
-    public void setCreated_at(Date create_at) {
-        this.created_at = create_at;
+    public void setCreatedAt(Date createdAt) {
+        this.createdAt = createdAt;
     }
 
-    public Date getUpdated_at() {
-        return updated_at;
+    public Date getUpdatedAt() {
+        return updatedAt;
     }
 
-    public void setUpdated_at(Date updated_at) {
-        this.updated_at = updated_at;
+    public void setUpdatedAt(Date updatedAt) {
+        this.updatedAt = updatedAt;
     }
 }

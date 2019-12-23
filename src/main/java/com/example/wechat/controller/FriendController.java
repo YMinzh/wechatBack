@@ -40,7 +40,7 @@ public class FriendController {
             return res;
         }
 
-        long userId = token.getUser_id();
+        long userId = token.getUserId();
 
         List<JSONObject> list = friendMapper.select(userId);
 

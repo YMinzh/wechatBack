@@ -29,7 +29,7 @@ public class UserController {
     public Response login(HttpServletRequest request, @RequestBody User user) {
         Response res = new Response();
 
-        String password = user.getPassword_hash();
+        String password = user.getPasswordHash();
         String username = user.getUsername();
 
         //判断用户名是否存在
@@ -52,7 +52,7 @@ public class UserController {
         }
 
         //比对密码
-        if (!user.getPassword_hash().equals(String.valueOf(password.hashCode()))) {
+        if (!user.getPasswordHash().equals(String.valueOf(password.hashCode()))) {
             res.setCode(-1);
             res.setData("密码错误");
             return res;
@@ -61,7 +61,7 @@ public class UserController {
         UUID tokenValue = UUID.randomUUID();
         Token token = tokenMapper.select(user.getId());
         Token newToken = new Token();
-        newToken.setUser_id(user.getId());
+        newToken.setUserId(user.getId());
         newToken.setToken(tokenValue.toString());
 
         if (token == null) {
@@ -93,8 +93,8 @@ public class UserController {
             return res;
         }
 
-        long user_id = token.getUser_id();
-        User userSelf = userMapper.getUserByUserId(user_id);
+        long userId = token.getUserId();
+        User userSelf = userMapper.getUserByUserId(userId);
 
         String str = request.getParameter("id");
 
@@ -106,15 +106,15 @@ public class UserController {
 
         List<User> list = new ArrayList<User>();
         list.add(userSelf);
-        long obUser_id;
+        long obUserId;
         try {
-            obUser_id = Long.parseLong(str);
+            obUserId = Long.parseLong(str);
         } catch (NumberFormatException e) {
             res.setCode(-1);
             res.setData("无效id");
             return res;
         }
-        list.add(userMapper.getUserByUserId(obUser_id));
+        list.add(userMapper.getUserByUserId(obUserId));
 
         res.setCode(0);
         res.setData(list);

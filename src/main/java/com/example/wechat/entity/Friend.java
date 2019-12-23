@@ -4,21 +4,10 @@ import java.util.Date;
 
 public class Friend {
     private long id;
-    private long user_id;
-    private long friend_id;
-    private Date created_at;
-    private Date updated_at;
-
-    @Override
-    public String toString() {
-        return "Friend{" +
-                "id=" + id +
-                ", user_id=" + user_id +
-                ", friend_id=" + friend_id +
-                ", created_at=" + created_at +
-                ", updated_at=" + updated_at +
-                '}';
-    }
+    private long userId;
+    private long friendId;
+    private Date createdAt;
+    private Date updatedAt;
 
     public long getId() {
         return id;
@@ -28,35 +17,35 @@ public class Friend {
         this.id = id;
     }
 
-    public long getUser_id() {
-        return user_id;
+    public long getUserId() {
+        return userId;
     }
 
-    public void setUser_id(long user_id) {
-        this.user_id = user_id;
+    public void setUserId(long userId) {
+        this.userId = userId;
     }
 
-    public long getFriend_id() {
-        return friend_id;
+    public long getFriendId() {
+        return friendId;
     }
 
-    public void setFriend_id(long friend_id) {
-        this.friend_id = friend_id;
+    public void setFriendId(long friendId) {
+        this.friendId = friendId;
     }
 
-    public Date getCreated_at() {
-        return created_at;
+    public Date getCreatedAt() {
+        return createdAt;
     }
 
-    public void setCreated_at(Date created_at) {
-        this.created_at = created_at;
+    public void setCreatedAt(Date createdAt) {
+        this.createdAt = createdAt;
     }
 
-    public Date getUpdated_at() {
-        return updated_at;
+    public Date getUpdatedAt() {
+        return updatedAt;
     }
 
-    public void setUpdated_at(Date updated_at) {
-        this.updated_at = updated_at;
+    public void setUpdatedAt(Date updatedAt) {
+        this.updatedAt = updatedAt;
     }
 }

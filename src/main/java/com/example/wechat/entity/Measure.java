@@ -4,25 +4,12 @@ import java.util.Date;
 
 public class Measure {
     private long id;
-    private long send_id;
-    private long target_id;
+    private long sendId;
+    private long targetId;
     private String content;
     private int status;
-    private Date created_at;
-    private Date updated_at;
-
-    @Override
-    public String toString() {
-        return "Measure{" +
-                "id=" + id +
-                ", send_id=" + send_id +
-                ", target_id=" + target_id +
-                ", content='" + content + '\'' +
-                ", status=" + status +
-                ", created_at=" + created_at +
-                ", updated_at=" + updated_at +
-                '}';
-    }
+    private Date createdAt;
+    private Date updatedAt;
 
     public long getId() {
         return id;
@@ -32,20 +19,20 @@ public class Measure {
         this.id = id;
     }
 
-    public long getSend_id() {
-        return send_id;
+    public long getSendId() {
+        return sendId;
     }
 
-    public void setSend_id(long send_id) {
-        this.send_id = send_id;
+    public void setSendId(long sendId) {
+        this.sendId = sendId;
     }
 
-    public long getTarget_id() {
-        return target_id;
+    public long getTargetId() {
+        return targetId;
     }
 
-    public void setTarget_id(long target_id) {
-        this.target_id = target_id;
+    public void setTargetId(long targetId) {
+        this.targetId = targetId;
     }
 
     public String getContent() {
@@ -64,19 +51,19 @@ public class Measure {
         this.status = status;
     }
 
-    public Date getCreated_at() {
-        return created_at;
+    public Date getCreatedAt() {
+        return createdAt;
     }
 
-    public void setCreated_at(Date created_at) {
-        this.created_at = created_at;
+    public void setCreatedAt(Date createdAt) {
+        this.createdAt = createdAt;
     }
 
-    public Date getUpdated_at() {
-        return updated_at;
+    public Date getUpdatedAt() {
+        return updatedAt;
     }
 
-    public void setUpdated_at(Date updated_at) {
-        this.updated_at = updated_at;
+    public void setUpdatedAt(Date updatedAt) {
+        this.updatedAt = updatedAt;
     }
 }

@@ -13,6 +13,6 @@ import java.util.List;
 @Mapper
 public interface FriendMapper {
 
-    @Select("SELECT * FROM chat_friend cf, chat_user cu where cf.user_id = #{user_id} and cu.id = cf.friend_id")
-    List<JSONObject> select(long user_id);
+    @Select("SELECT * FROM chat_friend cf, chat_user cu where cf.user_id = #{userId} and cu.id = cf.friend_id")
+    List<JSONObject> select(long userId);
 }

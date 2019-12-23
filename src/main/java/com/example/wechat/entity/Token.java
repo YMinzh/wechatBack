@@ -5,20 +5,9 @@ import java.util.Date;
 public class Token {
     private long id;
     private String token;
-    private long user_id;
-    private Date created_at;
-    private Date updated_at;
-
-    @Override
-    public String toString() {
-        return "Token{" +
-                "id=" + id +
-                ", token='" + token + '\'' +
-                ", user_id=" + user_id +
-                ", created_at=" + created_at +
-                ", updated_at=" + updated_at +
-                '}';
-    }
+    private long userId;
+    private Date createdAt;
+    private Date updatedAt;
 
     public long getId() {
         return id;
@@ -36,27 +25,27 @@ public class Token {
         this.token = token;
     }
 
-    public long getUser_id() {
-        return user_id;
+    public long getUserId() {
+        return userId;
     }
 
-    public void setUser_id(long user_id) {
-        this.user_id = user_id;
+    public void setUserId(long userId) {
+        this.userId = userId;
     }
 
-    public Date getCreated_at() {
-        return created_at;
+    public Date getCreatedAt() {
+        return createdAt;
     }
 
-    public void setCreated_at(Date created_at) {
-        this.created_at = created_at;
+    public void setCreatedAt(Date createdAt) {
+        this.createdAt = createdAt;
     }
 
-    public Date getUpdated_at() {
-        return updated_at;
+    public Date getUpdatedAt() {
+        return updatedAt;
     }
 
-    public void setUpdated_at(Date updated_at) {
-        this.updated_at = updated_at;
+    public void setUpdatedAt(Date updatedAt) {
+        this.updatedAt = updatedAt;
     }
 }

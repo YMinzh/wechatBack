@@ -41,15 +41,15 @@ public class MeasureController {
             return res;
         }
         //验证目标id是否存在
-        long targetId = measure.getTarget_id();
+        long targetId = measure.getTargetId();
         if (userMapper.getUserByUserId(targetId)==null){
             res.setCode(-1);
             res.setData("目标id不存在");
             return res;
         }
 
-        long userId = token.getUser_id();
-        measure.setSend_id(userId);
+        long userId = token.getUserId();
+        measure.setSendId(userId);
         measure.setStatus(0);
 
         measureMapper.addMeasure(measure);
@@ -76,7 +76,7 @@ public class MeasureController {
             return res;
         }
 
-        long targetId = token.getUser_id();
+        long targetId = token.getUserId();
 
         List<JSONObject> list= measureMapper.getMeasureList(targetId);
         res.setData(list);
@@ -103,9 +103,9 @@ public class MeasureController {
             return res;
         }
 
-        long targetId = token.getUser_id();
+        long targetId = token.getUserId();
 
-        measure.setTarget_id(targetId);
+        measure.setTargetId(targetId);
 
         List<Measure> list = null;
         try {
@@ -144,7 +144,7 @@ public class MeasureController {
             return res;
         }
 
-        long targetId = token.getUser_id();
+        long targetId = token.getUserId();
 
         long sendId = 0;
         try {
